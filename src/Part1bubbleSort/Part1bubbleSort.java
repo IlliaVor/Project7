@@ -1,7 +1,7 @@
 package Part1bubbleSort;
 
-import java.util.Scanner;
 import java.util.Random;
+import java.util.Scanner;
 
 public class Part1bubbleSort {
     public static void inputElements(int[] arr) {
@@ -36,15 +36,25 @@ public class Part1bubbleSort {
 
     public static void bubbleSort(int[] arr) {
         int a = arr.length;
+
+
         for (int i = 0; i < a - 1; i++) {
-            for (int j = 0; j < a - i - 1; j++) {
+            int lastIndex = a - i - 1;
+
+
+            for (int j = 0; j < lastIndex; j++) {
                 if (arr[j] > arr[j + 1])
                     swap(arr, j, j + 1);
 
 
             }
+
+
         }
+
+
     }
+
 
     public static void swap(int[] arr, int ind1, int ind2) {
         int temp = arr[ind1];
